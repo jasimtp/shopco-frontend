@@ -51,6 +51,10 @@ export default function UpiPaymentPage() {
 
   
 
+  const upiLink = `upi://pay?pa=${shopUpiId}&pn=${encodeURIComponent(
+    shopName
+  )}&am=${amount}&cu=INR&tn=${encodeURIComponent(orderId)}`;
+
   useEffect(() => {
     if (timeLeft <= 0) return;
 
@@ -74,14 +78,16 @@ const handlePayment = (app: UpiApp) => {
   setLoading(true);
   setSuccess(false);
 
-  setTimeout(() => {
-    setLoading(false);
-    setSuccess(true);
+ window.location.href = upiLink;
 
-    setTimeout(() => {
-      navigate("/orders");
-    }, 1200);
-  }, 3000);
+setTimeout(() => {
+  setLoading(false);
+  setSuccess(true);
+
+  setTimeout(() => {
+    navigate("/orders");
+  }, 1200);
+}, 3000);
 };;
 
   return (
