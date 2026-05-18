@@ -1,0 +1,461 @@
+
+.home {
+  background: #fff;
+ 
+  
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  background: #f2f0f1;
+  padding: 0px 80px 0;
+  min-height: 500px;
+
+}
+
+.heroText {
+  max-width: 580px;
+  margin-top: 60px;
+}
+
+.heroText h1 {
+  font-size: 64px;
+  line-height: 0.95;
+  font-weight: 900;
+  margin: 0;
+}
+
+.heroText p {
+  margin: 25px 0;
+  color: #666;
+  max-width: 520px;
+}
+
+.heroText button {
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 58px;
+  cursor: pointer;
+}
+
+.stats {
+  display: flex;
+  gap: 35px;
+  margin-top: 35px;
+  flex-wrap: wrap;
+}
+
+.stats strong {
+  display: block;
+  font-size: 32px;
+}
+
+.stats span {
+  color: #666;
+  font-size: 14px;
+}
+
+.heroImg {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  margin-top: 1px;
+}
+
+.heroImg img {
+  height: 620px;
+  max-width: 100%;
+  object-fit: contain;
+
+  animation: heroAnim 1.2s ease;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Desktop only */
+@media (min-width: 769px) {
+  .heroImg img {
+    transform: translateX(60px);
+  }
+}
+
+@keyframes heroAnim {
+  0% {
+    opacity: 0;
+    transform: translateX(60px) scale(0.92);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(60px) scale(1);
+  }
+}
+
+.starLeft {
+  position: absolute;
+  left: 40px;
+  top: 120px;
+  font-size: 40px;
+  color: black;
+}
+
+.starRight {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  font-size: 70px;
+  color: black;
+}
+
+.brands {
+  background: #000;
+  color: #fff;
+  padding: 28px 80px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.products {
+  padding: 55px 80px;
+  text-align: center;
+}
+
+.products h2,
+.dressStyle h2,
+.reviews h2 {
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 35px;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 300px));
+  justify-content: center;
+  gap: 28px;
+  text-align: left;
+}
+
+.card {
+  text-decoration: none;
+  color: #000;
+}
+
+.imageBox {
+  width: 100%;
+  background: #f0eeed;
+  border-radius: 14px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageBox img {
+  max-width: 85%;
+  max-height: 85%;
+  object-fit: contain;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin: 14px 0 6px;
+}
+
+.card p {
+  margin: 0;
+  color: #f5a623;
+}
+
+.card p span {
+  color: #777;
+}
+
+.card strong {
+  font-size: 20px;
+}
+
+.viewBtn {
+  margin-top: 35px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 999px;
+  padding: 12px 48px;
+  cursor: pointer;
+}
+
+.dressStyle {
+  background: #f0eeed;
+  margin: 30px 80px;
+  border-radius: 30px;
+  padding: 55px;
+  text-align: center;
+}
+
+.styleGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 20px;
+}
+
+.styleGrid div {
+  height: 260px;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.styleGrid span {
+  position: absolute;
+  top: 25px;
+  left: 28px;
+  font-weight: 800;
+  font-size: 22px;
+  z-index: 2;
+}
+
+.styleGrid img {
+  width: auto;
+  height: 90%;
+  max-width: 70%;
+  object-fit: contain;
+  margin-right: 25px;
+}
+
+.partyImg {
+  height: 110% !important;
+  max-width: 95% !important;
+}
+.reviews {
+  padding: 55px 80px;
+}
+
+.reviewHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.reviewArrows {
+  display: flex;
+  gap: 12px;
+}
+
+.reviewArrows button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.reviewGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.reviewCard {
+  border: 1px solid #ddd;
+  border-radius: 18px;
+  padding: 24px;
+}
+
+.stars {
+  color: #f5a623;
+}
+
+.reviewCard h4 span {
+  color: #00aa33;
+  font-size: 12px;
+}
+
+.reviewCard p {
+  color: #666;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .hero {
+    padding: 0px 40px 0;
+  }
+.heroText {
+  margin-top: 20px;
+}
+
+  .heroText h1 {
+    font-size: 48px;
+  }
+
+  .products,
+  .reviews {
+    padding: 45px 40px;
+  }
+
+  .productGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dressStyle {
+    margin: 30px 40px;
+  }
+
+  .brands {
+    padding: 24px 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 0px 16px 0;
+    min-height: auto;
+  }
+.heroText {
+  max-width: 580px;
+  margin-top: 10px;
+}
+
+  .heroText h1 {
+    font-size: 34px;
+    line-height: 1;
+  }
+
+  .heroText p {
+    font-size: 14px;
+    margin: 18px 0;
+  }
+
+  .heroText button {
+    width: 100%;
+    padding: 14px;
+  }
+
+  .stats {
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .stats strong {
+    font-size: 24px;
+  }
+
+  .stats span {
+    font-size: 12px;
+  }
+
+  .heroImg {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .heroImg img {
+    width: 100%;
+    height: auto;
+    max-height: 360px;
+  }
+
+  .brands {
+    padding: 20px 16px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    gap: 16px 24px;
+    font-size: 20px;
+  }
+
+  .products {
+    padding: 35px 16px;
+  }
+
+  .products h2,
+  .dressStyle h2,
+  .reviews h2 {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .productGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .imageBox {
+    height: 170px;
+  }
+
+  .card h3 {
+    font-size: 13px;
+  }
+
+  .card strong {
+    font-size: 16px;
+  }
+
+  .card p {
+    font-size: 12px;
+  }
+
+  .dressStyle {
+    margin: 20px 16px;
+    padding: 24px;
+    border-radius: 22px;
+  }
+
+  .styleGrid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .styleGrid div {
+    height: 180px;
+  }
+
+  .styleGrid span {
+    font-size: 18px;
+    top: 18px;
+    left: 20px;
+  }
+
+  .reviews {
+    padding: 35px 16px;
+  }
+
+  .reviewHeader {
+    align-items: flex-end;
+    gap: 10px;
+  }
+
+  .reviewGrid {
+    display: flex;
+    overflow-x: auto;
+    gap: 14px;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 8px;
+  }
+
+  .reviewCard {
+    min-width: 280px;
+    scroll-snap-align: start;
+  }
+}
+.emptyText {
+  text-align: center;
+  color: #777;
+  margin: 30px 0;
+}

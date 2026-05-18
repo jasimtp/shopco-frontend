@@ -1,0 +1,341 @@
+.page {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 28px;
+}
+
+.badge {
+  display: inline-block;
+  background: #111;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.header h1 {
+  font-size: 34px;
+  margin: 0 0 8px;
+  color: #111;
+}
+
+.header p {
+  color: #666;
+  margin: 0;
+}
+
+.createBtn {
+  border: none;
+  background: #111;
+  color: #fff;
+  padding: 13px 18px;
+  border-radius: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.toolbar {
+  background: #fff;
+  border-radius: 18px;
+  padding: 18px;
+  margin-bottom: 22px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.searchBox {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f5f5f5;
+  padding: 0 14px;
+  border-radius: 12px;
+}
+
+.searchBox input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 14px 0;
+  font-size: 14px;
+}
+
+.toolbar select {
+  border: 1px solid #eee;
+  outline: none;
+  padding: 0 14px;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.tableCard {
+  background: #fff;
+  border-radius: 22px;
+  padding: 8px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  overflow-x: auto;
+}
+
+.tableCard table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 850px;
+}
+
+.tableCard th {
+  text-align: left;
+  padding: 18px;
+  font-size: 13px;
+  color: #777;
+  border-bottom: 1px solid #eee;
+}
+
+.tableCard td {
+  padding: 18px;
+  border-bottom: 1px solid #f1f1f1;
+  color: #222;
+}
+
+.productInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.productInfo img {
+  width: 58px;
+  height: 58px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.productInfo strong {
+  display: block;
+  font-size: 15px;
+}
+
+.productInfo small {
+  color: #777;
+}
+
+.activeStatus,
+.outStatus {
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.activeStatus {
+  background: #eaf8ee;
+  color: #1a8f3c;
+}
+
+.outStatus {
+  background: #fff1f1;
+  color: #d93025;
+}
+
+.actionHead {
+  text-align: center !important;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.actions button {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.editBtn {
+  background: #f3f3f3;
+  color: #111;
+}
+
+.deleteBtn {
+  background: #fff1f1;
+  color: #d93025;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .createBtn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .toolbar {
+    flex-direction: column;
+  }
+
+  .toolbar select {
+    padding: 14px;
+  }
+}
+
+/* Mobile card layout */
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .tableCard {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .tableCard table,
+  .tableCard thead,
+  .tableCard tbody,
+  .tableCard th,
+  .tableCard td,
+  .tableCard tr {
+    display: block;
+    width: 100%;
+  }
+
+  .tableCard table {
+    min-width: 0;
+  }
+
+  .tableCard thead {
+    display: none;
+  }
+
+  .tableCard tr {
+    background: #fff;
+    border-radius: 18px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  }
+
+  .tableCard td {
+    border-bottom: none;
+    padding: 10px 0;
+  }
+
+  .tableCard td:nth-child(2)::before {
+    content: "Category: ";
+    font-weight: 700;
+  }
+
+  .tableCard td:nth-child(3)::before {
+    content: "Price: ";
+    font-weight: 700;
+  }
+
+  .tableCard td:nth-child(4)::before {
+    content: "Stock: ";
+    font-weight: 700;
+  }
+
+  .tableCard td:nth-child(5)::before {
+    content: "Status: ";
+    font-weight: 700;
+  }
+
+  .actions {
+    justify-content: flex-start;
+    margin-top: 8px;
+  }
+
+  .actions button {
+    width: 42px;
+    height: 42px;
+  }
+}
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.deleteModal {
+  width: 360px;
+  background: #fff;
+  padding: 28px;
+  border-radius: 18px;
+  position: relative;
+  text-align: center;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.modalActions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.cancelDeleteBtn,
+.confirmDeleteBtn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.cancelDeleteBtn {
+  background: #f1f1f1;
+}
+
+.confirmDeleteBtn {
+  background: #ef4444;
+  color: white;
+}
+.tableCard select {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tableCard select:focus {
+  outline: none;
+  border-color: #111;
+}

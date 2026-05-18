@@ -1,0 +1,227 @@
+.authPage {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(255, 220, 220, 0.8), transparent 34%),
+    linear-gradient(135deg, #fff7f7, #f6f7fb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.authCard {
+  width: 100%;
+  max-width: 460px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 24px 70px rgba(28, 35, 45, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.left {
+  background: #ffffff;
+  color: #111;
+  padding: 34px 32px 18px;
+  text-align: center;
+}
+
+.logoBadge {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  margin: 0 auto 16px;
+  background: linear-gradient(135deg, #fff, #f1f1f1);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 20px;
+  color: #e24b4b;
+}
+
+.left h1 {
+  font-size: 34px;
+  line-height: 1.05;
+  font-weight: 900;
+  margin: 0 0 10px;
+  letter-spacing: -1px;
+}
+
+.left p {
+  color: #777;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.form {
+  padding: 22px 32px 34px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form h2 {
+  font-size: 28px;
+  font-weight: 900;
+  margin: 0 0 22px;
+  text-align: center;
+  color: #111;
+  letter-spacing: -0.5px;
+}
+
+.form label {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.inputBox {
+  height: 50px;
+  border: 1px solid #e9e9e9;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 0 16px;
+  margin-bottom: 16px;
+  color: #999;
+  background: #fbfbfb;
+  transition: 0.2s ease;
+}
+
+.inputBox:focus-within {
+  border-color: #e24b4b;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(226, 75, 75, 0.1);
+}
+
+.inputBox input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  color: #111;
+}
+
+.inputBox input::placeholder {
+  color: #aaa;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2px 0 22px;
+  font-size: 13px;
+  color: #666;
+}
+
+.options span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.options a,
+.switchText a {
+  color: #e24b4b;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.options a:hover,
+.switchText a:hover {
+  text-decoration: underline;
+}
+
+.submitBtn {
+  height: 52px;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ef6b6b, #e24b4b);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: 0.2s ease;
+}
+
+.submitBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(226, 75, 75, 0.28);
+}
+
+.submitBtn:active {
+  transform: translateY(0);
+}
+
+.switchText {
+  text-align: center;
+  margin-top: 22px;
+  color: #666;
+  font-size: 14px;
+}
+
+@media (max-width: 480px) {
+  .authPage {
+    padding: 16px;
+    align-items: flex-start;
+  }
+
+  .authCard {
+    max-width: 100%;
+    border-radius: 22px;
+  }
+
+  .left {
+    padding: 28px 22px 16px;
+  }
+
+  .logoBadge {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    font-size: 18px;
+  }
+
+  .left h1 {
+    font-size: 28px;
+  }
+
+  .left p {
+    font-size: 13px;
+  }
+
+  .form {
+    padding: 20px 22px 28px;
+  }
+
+  .form h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+
+  .inputBox {
+    height: 48px;
+    border-radius: 14px;
+  }
+
+  .options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .submitBtn {
+    height: 50px;
+    border-radius: 14px;
+  }
+}

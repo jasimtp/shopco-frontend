@@ -1,0 +1,474 @@
+.page {
+  padding: 18px 70px;
+  background: #fff;
+}
+
+.breadcrumb {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.sidebar {
+  border: 1px solid #eee;
+  border-radius: 20px;
+  padding: 20px;
+  height: fit-content;
+  background: #fff;
+}
+
+.filterHead,
+.filterBlock h4,
+.topRow,
+.pagination,
+.filterList div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filterHead {
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.filterHead h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.closeBtn {
+  display: none;
+  cursor: pointer;
+}
+
+.filterList {
+  margin-top: 16px;
+}
+
+.filterList div {
+  color: #777;
+  padding: 12px 0;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.activeCategory {
+  color: #000 !important;
+  font-weight: 700;
+}
+
+.filterBlock {
+  border-top: 1px solid #eee;
+  margin-top: 18px;
+  padding-top: 18px;
+}
+
+.filterBlock h4 {
+  margin: 0 0 16px;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.range {
+  height: 6px;
+  background: #000;
+  border-radius: 999px;
+  position: relative;
+  margin: 8px 0;
+}
+
+.range::before,
+.range::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: -6px;
+}
+
+.range::before {
+  left: 6%;
+}
+
+.range::after {
+  right: 6%;
+}
+
+.priceText {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+.colorGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 32px);
+  gap: 12px;
+}
+
+.colorGrid button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.selectedColor {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+.sizeGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.sizeGrid button {
+  border: none;
+  border-radius: 999px;
+  background: #f0f0f0;
+  color: #777;
+  padding: 9px 14px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.sizeGrid .activeSize {
+  background: #000;
+  color: #fff;
+}
+
+.applyBtn {
+  width: 100%;
+  margin-top: 22px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 13px;
+  cursor: pointer;
+}
+
+.content {
+  min-width: 0;
+}
+
+.topRow {
+  margin-bottom: 24px;
+}
+
+.content h1 {
+  margin: 0;
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.topRow p {
+  margin: 8px 0 0;
+  color: #777;
+  font-size: 14px;
+}
+
+.sort {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #777;
+  font-size: 14px;
+}
+
+.sort select {
+  border: none;
+  background: transparent;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+}
+
+.sort button {
+  display: none;
+  border: none;
+  background: #f0f0f0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 28px;
+  row-gap: 34px;
+}
+
+.card {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  min-width: 0;
+}
+
+.imageBox {
+  background: #f0eeed;
+  height: 255px;
+  border-radius: 16px;
+
+  display: flex;              /* 👈 change */
+  align-items: center;        /* 👈 vertical center */
+  justify-content: center;    /* 👈 horizontal center */
+  overflow: hidden;
+}
+
+.imageBox img {
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.card h3 {
+  font-size: 15px;
+  line-height: 1.25;
+  margin: 12px 0 6px;
+  font-weight: 800;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rating {
+  color: #f5a623;
+  margin: 0 0 6px;
+  font-size: 14px;
+}
+
+.rating span {
+  color: #777;
+  margin-left: 4px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.price strong {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.price del {
+  color: #999;
+  font-size: 16px;
+}
+
+.price span {
+  background: #ffe5e5;
+  color: #ff3333;
+  border-radius: 999px;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.pagination {
+  border-top: 1px solid #eee;
+  margin-top: 34px;
+  padding-top: 20px;
+}
+
+.pagination button {
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 8px;
+  padding: 9px 14px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pagination div {
+  display: flex;
+  gap: 8px;
+}
+
+.pagination span {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  color: #777;
+  cursor: pointer;
+}
+
+.pageActive {
+  background: #f0f0f0;
+  color: #000 !important;
+}
+
+.overlay {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .page {
+    padding: 28px 48px;
+  }
+
+  .layout {
+    grid-template-columns: 240px 1fr;
+  }
+
+  .imageBox {
+    height: 230px;
+  }
+}
+
+@media (max-width: 992px) {
+  .page {
+    padding: 24px 28px;
+  }
+
+  .layout {
+    grid-template-columns: 220px 1fr;
+    gap: 20px;
+  }
+
+  .grid {
+    gap: 18px;
+  }
+
+  .imageBox {
+    height: 210px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 18px 16px;
+  }
+
+  .layout {
+    display: block;
+  }
+
+  .breadcrumb {
+    font-size: 12px;
+    margin-bottom: 18px;
+  }
+
+  .topRow {
+    align-items: flex-start;
+    margin-bottom: 18px;
+  }
+
+  .content h1 {
+    font-size: 28px;
+  }
+
+  .topRow p {
+    font-size: 12px;
+  }
+
+  .sort span {
+    display: none;
+  }
+
+  .sort button {
+    display: grid;
+    place-items: center;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 14px;
+  }
+
+  .imageBox {
+    height: 180px;
+    border-radius: 14px;
+  }
+
+  .card h3 {
+    font-size: 13px;
+    margin: 10px 0 5px;
+  }
+
+  .rating {
+    font-size: 12px;
+  }
+
+  .price strong {
+    font-size: 16px;
+  }
+
+  .price del,
+  .price span {
+    font-size: 11px;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 85%;
+    max-width: 360px;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 100;
+    border-radius: 0;
+    transition: 0.3s ease;
+  }
+
+  .sidebar.show {
+    right: 0;
+  }
+
+  .closeBtn {
+    display: block;
+  }
+
+  .overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 99;
+  }
+
+  .pagination {
+    gap: 8px;
+  }
+
+  .pagination button {
+    padding: 9px 10px;
+    font-size: 12px;
+  }
+
+  .pagination span {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,158 @@
+.footer {
+  background: #f0f0f0;
+  padding: 0 80px 32px;
+  margin-top: 120px;
+  position: relative;
+}
+
+.newsletter {
+  background: #000;
+  color: #fff;
+  border-radius: 14px;
+  padding: 36px 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.newsletter h2 {
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 900;
+  margin: 0;
+}
+
+.subscribe {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.subscribe input,
+.subscribe button {
+  height: 42px;
+  border-radius: 999px;
+  border: none;
+  padding: 0 18px;
+}
+
+.subscribe button {
+  background: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.footerContent {
+  margin-top: -35px;
+  display: grid;
+  grid-template-columns: 1.5fr repeat(4, 1fr);
+  gap: 45px;
+}
+
+.brand h2 {
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 18px;
+}
+
+.brand p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 260px;
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.socials span {
+  width: 28px;
+  height: 28px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+}
+
+.column h4 {
+  letter-spacing: 3px;
+  font-size: 13px;
+  margin-bottom: 22px;
+}
+
+.column a {
+  display: block;
+  color: #666;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.bottom {
+  border-top: 1px solid #ddd;
+  margin-top: 45px;
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom p {
+  color: #666;
+  font-size: 13px;
+}
+
+.payments {
+  display: flex;
+  gap: 10px;
+}
+
+.payments span {
+  background: #fff;
+  border-radius: 5px;
+  padding: 6px 9px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 0 20px 28px;
+  }
+
+  .newsletter {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 28px 24px;
+  }
+
+  .newsletter h2 {
+    font-size: 28px;
+  }
+
+  .subscribe {
+    width: 100%;
+  }
+
+  .footerContent {
+    grid-template-columns: 1fr 1fr;
+    margin-top: -45px;
+  }
+
+  .brand {
+    grid-column: span 2;
+  }
+
+  .bottom {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
