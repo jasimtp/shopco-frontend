@@ -49,9 +49,7 @@ export default function UpiPaymentPage() {
   const [loading, setLoading] = useState(false);
   const [timeLeft, setTimeLeft] = useState(300);
 
-  const upiLink = `upi://pay?pa=${shopUpiId}&pn=${encodeURIComponent(
-    shopName
-  )}&am=${amount}&cu=INR&tn=${encodeURIComponent(orderId)}`;
+  
 
   useEffect(() => {
     if (timeLeft <= 0) return;
